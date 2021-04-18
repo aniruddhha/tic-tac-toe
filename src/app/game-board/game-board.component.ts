@@ -55,7 +55,7 @@ export class GameBoardComponent implements OnInit {
 
   img(turn: string) {
     if (turn.length)
-      return turn == 'x' ? '../../assets/cross.svg' : '../../assets/circle.svg'
+      return turn == 'x' ? '../../tic-tac-toe/assets/cross.svg' : '../../tic-tac-toe/assets/circle.svg'
     return turn
   }
 
