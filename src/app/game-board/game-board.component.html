@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col d-flex justify-content-center align-items-center">
+        <h1 *ngIf="sts == 'running'">
+            <p class="alert alert-info">{{msg}}</p>
+        </h1>
+        <h1 *ngIf="sts == 'win'">
+            <p class="alert alert-success">{{msg}}</p>
+        </h1>
+    </div>
+</div>
+<div class="row border-bottom border-dark">
+    <div [ngClass]="{'bg-danger' : isInWinning(0)}"
+        class="col border-right border-dark d-flex justify-content-center align-items-center" (click)="cellClick(0)">
+        <img *ngIf="moves[0].length" [src]="img(moves[0])" width="80" height="80">
+    </div>
+    <div [ngClass]="{'bg-danger' : isInWinning(1)}"
+        class="col border-right border-dark border-dark d-flex justify-content-center align-items-center"
+        (click)="cellClick(1)">
+        <img *ngIf="moves[1].length" [src]="img(moves[1])" width="80" height="80">
+    </div>
+    <div [ngClass]="{'bg-danger' : isInWinning(2)}" class="col d-flex justify-content-center align-items-center"
+        (click)="cellClick(2)">
+        <img *ngIf="moves[2].length" [src]="img(moves[2])" width="80" height="80">
+    </div>
+</div>
+<div class="row border-bottom border-dark">
+    <div [ngClass]="{'bg-danger' : isInWinning(3)}"
+        class="col border-right border-dark d-flex justify-content-center align-items-center" (click)="cellClick(3)">
+        <img *ngIf="moves[3].length" [src]="img(moves[3])" width="80" height="80">
+    </div>
+    <div [ngClass]="{'bg-danger' : isInWinning(4)}"
+        class="col border-right border-dark d-flex justify-content-center align-items-center" (click)="cellClick(4)">
+        <img *ngIf="moves[4].length" [src]="img(moves[4])" width="80" height="80">
+    </div>
+    <div [ngClass]="{'bg-danger' : isInWinning(5)}" class="col d-flex justify-content-center align-items-center"
+        (click)="cellClick(5)">
+        <img *ngIf="moves[5].length" [src]="img(moves[5])" width="80" height="80">
+    </div>
+</div>
+<div class="row">
+    <div [ngClass]="{'bg-danger' : isInWinning(6)}"
+        class="col border-right border-dark d-flex justify-content-center align-items-center" (click)="cellClick(6)">
+        <img *ngIf="moves[6].length" [src]="img(moves[6])" width="80" height="80">
+    </div>
+    <div [ngClass]="{'bg-danger' : isInWinning(7)}"
+        class="col border-right border-dark d-flex justify-content-center align-items-center" (click)="cellClick(7)">
+        <img *ngIf="moves[7].length" [src]="img(moves[7])" width="80" height="80">
+    </div>
+    <div [ngClass]="{'bg-danger' : isInWinning(8)}" class="col d-flex justify-content-center align-items-center"
+        (click)="cellClick(8)">
+        <img *ngIf="moves[8].length" [src]="img(moves[8])" width="80" height="80">
+    </div>
+</div>
+<div class="row">
+    <div class="col d-flex justify-content-center align-items-center">
+        <input type="button" value="RESTART" class="btn btn-sm btn-primary" (click)="restart()">
+    </div>
+</div>
